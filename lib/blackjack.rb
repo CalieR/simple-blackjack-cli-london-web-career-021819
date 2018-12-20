@@ -35,20 +35,16 @@ def hit?(card_total)
   answer = get_user_input
   # if 'h' deal a new card and increment the players total
   if answer == "h"
-    print "hit me"
     card_total += deal_card
   elsif answer == "s"
-    print "stick"
     card_total
   # if not 'h' or 's' call invalid command and prompt_user
   else
-    print "whoopsie"
     invalid_command
   end
 end
 
 #hit?(15)
-
 
 def invalid_command
   puts "Please enter a valid command"
@@ -64,10 +60,9 @@ end
 def runner # enacts gameplay UNTIL card_total exceeds 21
   welcome
   score = initial_round # score after first 2 deals
-  
+
   # deal new card and add to score until score > 21
-  
-    
+
   until score > 21
      score = hit?(score) # add return value of calling hit(score) to return value of calling initial_round
      display_card_total(score)

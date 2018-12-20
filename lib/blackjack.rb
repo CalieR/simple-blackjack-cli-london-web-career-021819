@@ -35,8 +35,7 @@ def hit?(card_total)
   answer = get_user_input
   # if 'h' deal a new card and increment the players total
   if answer == "h"
-    new_card = deal_card
-    card_total = card_total + new_card
+    card_total += deal_card
   # if not 'h' or 's' call invalid command and prompt_user
   elsif answer != "h" && answer != "s"
     invalid_command

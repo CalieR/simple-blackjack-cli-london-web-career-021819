@@ -39,7 +39,7 @@ def hit?(card_total)
   elsif answer == "s"
     card_total
   # if not 'h' or 's' call invalid command and prompt_user
-  else 
+  else
     invalid_command
   end
   card_total
@@ -51,6 +51,7 @@ end
 def invalid_command
   puts "Please enter a valid command"
   prompt_user
+  get_user_input
 end
 
 #####################################################

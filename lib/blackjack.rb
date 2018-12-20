@@ -35,11 +35,14 @@ def hit?(card_total)
   answer = get_user_input
   # if 'h' deal a new card and increment the players total
   if answer == "h"
+    print "hit me"
     card_total += deal_card
   elsif answer == "s"
+    print "stick"
     card_total
   # if not 'h' or 's' call invalid command and prompt_user
   else
+    print "whoopsie"
     invalid_command
   end
 end

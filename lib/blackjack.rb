@@ -41,7 +41,7 @@ def hit?(card_total)
   # if not 'h' or 's' call invalid command and prompt_user
   elsif answer != "h" && answer != "s"
     invalid_command
-    prompt_user
+    
   end
   card_total
 end
@@ -51,6 +51,7 @@ end
 
 def invalid_command
   puts "Please enter a valid command"
+  prompt_user
 end
 
 #####################################################

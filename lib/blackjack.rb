@@ -60,17 +60,16 @@ end
 # get every test to pass before coding runner below #
 #####################################################
 
-# TESTS ALL PASS BUT S STILL DEALS A CARD!!
 
 def runner # enacts gameplay UNTIL card_total exceeds 21
   welcome
   score = initial_round # score after first 2 deals
-
+  
   # deal new card and add to score until score > 21
-  #new_score = 0 # initialise an empty counter to hold result of each loop
-
+  
+    
   until score > 21
-     score = hit?(score) # increment new_score by the return value of calling hit?(score)
+     score = hit?(score) # add return value of calling hit(score) to return value of calling initial_round
      display_card_total(score)
    end
   end_game(score)

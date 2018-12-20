@@ -70,7 +70,7 @@ def runner # enacts gameplay UNTIL card_total exceeds 21
   #new_score = 0 # initialise an empty counter to hold result of each loop
 
   until score > 21
-     score += hit?(score) # increment new_score by the return value of calling hit?(score)
+     score = hit?(score) # increment new_score by the return value of calling hit?(score)
      display_card_total(score)
    end
   end_game(score)

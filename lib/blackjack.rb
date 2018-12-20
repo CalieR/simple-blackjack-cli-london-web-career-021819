@@ -64,9 +64,10 @@ end
 
 def runner # enacts gameplay UNTIL card_total exceeds 21
   welcome
-  score = initial_round # score after first 2 deals
+  #score = initial_round # score after first 2 deals
+  score = 21
   # deal new card and add to score until score > 21
-  new_score = 0 # initialise an emoty counter to hold result of each loop
+  new_score = 0 # initialise an empty counter to hold result of each loop
 
   until new_score > 21
      new_score = new_score + hit?(score) # increment new_score by the return value of calling hit?(score)

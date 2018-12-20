@@ -64,15 +64,14 @@ end
 
 def runner # enacts gameplay UNTIL card_total exceeds 21
   welcome
-  #score = initial_round # score after first 2 deals
-  score = 21
-  # deal new card and add to score until score > 21
-  new_score = 0 # initialise an empty counter to hold result of each loop
+  score = initial_round # score after first 2 deals
 
-  until new_score > 21
-     new_score += hit?(score) # increment new_score by the return value of calling hit?(score)
-     puts new_score
-     display_card_total(new_score)
+  # deal new card and add to score until score > 21
+  #new_score = 0 # initialise an empty counter to hold result of each loop
+
+  until score > 21
+     score += hit?(score) # increment new_score by the return value of calling hit?(score)
+     display_card_total(score)
    end
-  end_game(new_score)
+  end_game(score)
 end
